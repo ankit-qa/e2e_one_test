@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'watir-webdriver'
 gem 'watir'
 gem 'cucumber'
-gem 'watir'
 gem 'deep_struct'
 gem 'mail'
 gem 'nokogiri'
@@ -21,3 +20,4 @@ gem 'yard'
 gem 'yard-cucumber'
 gem 'factory_girl' # test data factory
 gem 'ffaker' # fake data generator
+gem 'dotenv'

@@ -2,10 +2,8 @@ require 'watir-webdriver/atoms'
 require 'page-object'
 
 
-Given(/^I navigate to offer page url$/) do
-  @browser = Watir::Browser.new :firefox
-  @browser.cookies.clear
-  @browser.goto "https://offer-application-frontend-qa.dev.k8.akelius.com/"
+Given(/^user is on offer page$/) do
+  p "Welcome to Offer page"
 end
 
 And(/^a property manager logs in$/) do
@@ -14,6 +12,5 @@ And(/^a property manager logs in$/) do
   @browser.text_field(name:"password").set "V70BCkFq"
   @browser.button(type:"submit").click
   p "Success"
-
 end
 
