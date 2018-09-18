@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'dotenv'
 gem 'watir-webdriver'
 gem 'watir'
 gem 'cucumber'
@@ -20,4 +20,3 @@ gem 'yard'
 gem 'yard-cucumber'
 gem 'factory_girl' # test data factory
 gem 'ffaker' # fake data generator
-gem 'dotenv'
