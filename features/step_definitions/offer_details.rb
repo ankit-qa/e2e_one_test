@@ -3,7 +3,7 @@ When(/^I click on Add offer/) do
 end
 
 Then(/^I add a new property detail mail$/) do
-  @browser.file_field(accept:"undefined").set("/Users/ankitshrivatri/Desktop/lost.eml")
+  @browser.file_field(accept:"undefined").set("/Users/ankitshrivatri/Desktop/project/e2e_test/e2e_one_test/lost.eml")
   @browser.div(text:"Berlin").click
   sleep 2
   @browser.span(text:"save").click

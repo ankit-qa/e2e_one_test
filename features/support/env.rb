@@ -1,4 +1,6 @@
 require 'cucumber'
+require 'dotenv'
+Dotenv.load
 
 def browser
   (ENV['BROWSER'] ||= 'firefox').downcase.to_sym
@@ -10,13 +12,12 @@ end
 
 Before do |scenario|
   p "Starting #{scenario}"
+  @browser = Watir::Browser.new browser
 
   if environment == :staging
-    @browser = Watir::Browser.new browser
     @browser.goto "https://offer-application-frontend-qa.dev.k8.akelius.com/"
 
   elsif environment == :dev
-    @browser = Watir::Browser.new browser
     @browser.goto "https://offer-application-frontend-dev.dev.k8.akelius.com/"
   end
 end
